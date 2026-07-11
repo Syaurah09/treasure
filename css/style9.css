@@ -1,0 +1,324 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7b154;
+    color: #451a03;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    zoom: 2; /* Applies global viewport layout scaling */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Main Mobile Viewport Wrapper */
+.main-container {
+    width: 100%;
+    max-width: 480px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Mock Wikipedia Header */
+.wiki-header {
+    width: 100%;
+    max-width: 480px;
+    background-color: #CDE0F6;
+    padding: 10px 15px;
+    border-bottom: 1px solid #b2cced;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger-menu {
+    font-size: 20px;
+    color: #4a6fa5;
+    cursor: pointer;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wiki-logo-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    overflow: hidden;
+}
+
+.wiki-logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wiki-text {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #4a5568;
+    line-height: 1.1;
+}
+
+.search-bar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 130px;
+    padding: 4px 25px 4px 8px;
+    border: 1px solid #a0aec0;
+    border-radius: 20px;
+    font-size: 11px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 8px;
+    font-size: 11px;
+    color: #718096;
+}
+
+/* Warm Marigold Yellow & Orange Gradient Wrapper */
+.content-wrapper {
+    background: linear-gradient(to bottom, #f59e0b 0%, #ea580c 40%, #ca8a04 75%, #9a3412 100%);
+    padding: 30px 20px 240px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Top Album Intro Row */
+.album-intro-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+}
+
+.album-cover-box {
+    width: 120px;
+    height: 120px;
+    background-color: #78350f;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.album-cover-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.album-title-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
+}
+
+.album-title-box h1 {
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+}
+
+/* Tracklist Section */
+.tracklist-section {
+    position: relative;
+    width: 100%;
+}
+
+.tracklist-card {
+    background-color: #7c2d12;
+    opacity: 0.95;
+    border-radius: 16px;
+    padding: 22px 25px;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 85%;
+}
+
+.tracklist-card h2 {
+    font-size: 16px;
+    font-family: 'Arial Black', sans-serif;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.tracklist-card ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tracklist-card ul li {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+}
+
+.tracklist-card ul li::before {
+    content: "•";
+    color: #ffffff;
+}
+
+/* Details Section */
+.details-section {
+    position: relative;
+    width: 100%;
+}
+
+.details-card {
+    background-color: #fef3c7;
+    border-radius: 16px;
+    padding: 30px 22px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.details-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #451a03;
+    text-align: justify;
+    font-weight: 500;
+}
+
+/* Photos Section */
+.photos-section {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.photos-heading-box {
+    background-color: #7c2d12;
+    border-radius: 8px;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 240px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.photos-heading-box h2 {
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+
+.photo-item {
+    width: 100%;
+    aspect-ratio: 1.12 / 1;
+    background-color: #7c2d12;
+    border-radius: 12px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Decoration Main Container */
+.footer-decoration-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    background: transparent;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.footer-layer {
+    position: absolute;
+    bottom: 0;
+    display: block;
+}
+
+/* Fixed Base Gingham Layer (d9) */
+.layer-gingham-right {
+    right: -10px;
+    width: 75%;            /* Brought down from 95% to stop excessive bloat */
+    height: auto;
+    max-height: 140px;     /* Set boundaries for proportional scaling */
+    object-fit: contain;
+    object-position: bottom right;
+    z-index: 2;            /* Sits over white background plate */
+}
+
+/* Foreground Accent Gingham Fragment Layer (d11) */
+.layer-gingham-left {
+    left: -15px;
+    width: 60%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    object-position: bottom left;
+    z-index: 3;            /* Top layer, overlaps d9 */
+}
+
+/* White Backing Torn Paper Border Edge Layer (d10) */
+.layer-torn-paper {
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 65px;
+    object-fit: fill;
+    z-index: 1;            /* Lowest layer, acting as a background for the textures */
+}
